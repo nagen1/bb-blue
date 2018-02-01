@@ -198,4 +198,5 @@ include_directories(
 # catkin_add_nosetests(test)
 
 add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
+add_dependencies(talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(talker roboticscape ${catkin_LIBRARIES})

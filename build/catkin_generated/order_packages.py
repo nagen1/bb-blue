@@ -2,4 +2,4 @@
 source_root_dir = "/home/ubuntu/catkin_ws5/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/opt/ros/kinetic".split(';') if "/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/home/ubuntu/catkin_ws5/devel;/opt/ros/kinetic".split(';') if "/home/ubuntu/catkin_ws5/devel;/opt/ros/kinetic" != "" else []

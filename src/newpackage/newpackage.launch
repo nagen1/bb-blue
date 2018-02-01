@@ -1,0 +1,3 @@
+<launch>
+  <node name="talker" pkg="newpackage" type="talker" />
+</launch>

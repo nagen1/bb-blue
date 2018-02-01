@@ -7,15 +7,15 @@
 #IncludeRegexTransform: 
 
 /home/ubuntu/catkin_ws5/src/newpackage/src/talker.cpp
+roboticscape.h
+-
+rc_usefulincludes.h
+-
 ros/ros.h
 -
 std_msgs/String.h
 -
 sstream
--
-roboticscape.h
--
-rc_usefulincludes.h
 -
 
 /opt/ros/kinetic/include/ros/advertise_options.h
