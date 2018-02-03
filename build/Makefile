@@ -464,6 +464,19 @@ talker/fast:
 	$(MAKE) -f newpackage/CMakeFiles/talker.dir/build.make newpackage/CMakeFiles/talker.dir/build
 .PHONY : talker/fast
 
+#=============================================================================
+# Target rules for targets named listener
+
+# Build rule for target.
+listener: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 listener
+.PHONY : listener
+
+# fast build rule for target.
+listener/fast:
+	$(MAKE) -f newpackage/CMakeFiles/listener.dir/build.make newpackage/CMakeFiles/listener.dir/build
+.PHONY : listener/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -500,6 +513,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... talker"
+	@echo "... listener"
 .PHONY : help
 
 

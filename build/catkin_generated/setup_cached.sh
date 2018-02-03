@@ -7,4 +7,10 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/ubuntu/catkin_ws5/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/ubuntu/catkin_ws5/devel/lib:$LD_LIBRARY_PATH"
+export PATH="/opt/ros/kinetic/bin:/home/ubuntu/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PKG_CONFIG_PATH="/home/ubuntu/catkin_ws5/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/ubuntu/catkin_ws5/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/catkin_ws5/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/ubuntu/catkin_ws5/src:$ROS_PACKAGE_PATH"
