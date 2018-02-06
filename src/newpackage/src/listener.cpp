@@ -19,16 +19,29 @@ void listenCallback(const std_msgs::String::ConstPtr& msg) {
  ROS_INFO("I hear you: [%s]", msg->data.c_str());
 
  newMsg = msg->data.c_str();
+ rc_initialize();
+ rc_enable_motors();
 
- if("forward" == newMsg) {
-   rc_initialize();
+ if("hello" == newMsg) {
    rc_set_led(RED, ON);
    ROS_INFO("Welcome to the world");
  }
- if("stop" == newMsg) {
-   rc_cleanup();
+
+ if("forward" == newMsg) {
+   //rc_set_motor_free_spin(1);
+   //rc_set_motor_free_spin(2);
+   rc_set_motor(1, 0.5);
+   rc_set_motor(2, 0.5);
+   ROS_INFO("Going forward");
  }
- if("down" == newMsg) {
+
+ if("stop" == newMsg) {
+   rc_set_motor_brake(1);
+   rc_set_motor_brake(2);
+   ROS_INFO("Brake/stopped");
+ }
+
+ if("shutdown" == newMsg) {
    rc_cleanup();
    ros::shutdown();
    ROS_INFO("Shutting down ROS Node");
