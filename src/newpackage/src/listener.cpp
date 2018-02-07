@@ -26,22 +26,32 @@ void listenCallback(const std_msgs::String::ConstPtr& msg) {
    rc_set_led(RED, ON);
    ROS_INFO("Welcome to the world");
  }
-
- if("forward" == newMsg) {
-   //rc_set_motor_free_spin(1);
-   //rc_set_motor_free_spin(2);
+ else if("forward" == newMsg) {
    rc_set_motor(1, 0.5);
    rc_set_motor(2, 0.5);
    ROS_INFO("Going forward");
  }
-
- if("stop" == newMsg) {
+ else if("stop" == newMsg) {
    rc_set_motor_brake(1);
    rc_set_motor_brake(2);
    ROS_INFO("Brake/stopped");
  }
-
- if("shutdown" == newMsg) {
+ else if("backward" == newMsg) {
+   rc_set_motor(1, -0.5);
+   rc_set_motor(2, -0.5);
+   ROS_INFO("Going backward");
+ }
+ else if("right" == newMsg) {
+   rc_set_motor(1, 0.2);
+   rc_set_motor(2, 0.5);
+   ROS_INFO("Going right");
+ }
+ else if("left" == newMsg) {
+   rc_set_motor(1, 0.5);
+   rc_set_motor(2, 0.2);
+   ROS_INFO("Going left");
+ }
+ else if("shutdown" == newMsg) {
    rc_cleanup();
    ros::shutdown();
    ROS_INFO("Shutting down ROS Node");
